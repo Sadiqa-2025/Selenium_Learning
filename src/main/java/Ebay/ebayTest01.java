@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ebayTest01 {
-    static String verifyTitle(String actualTitle){
+    public static String verifyTitle(String actualTitle){
         String expectedTitle = "Electronics, Cars, Fashion, Collectibles & More | eBay";
         if(actualTitle.equals(expectedTitle)){
            return  "Title validation is passed";
