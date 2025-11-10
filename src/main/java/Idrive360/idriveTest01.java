@@ -10,7 +10,7 @@ public class idriveTest01 {
         driver.get("https://www.idrive360.com/enterprise/");
         Thread.sleep(5000);
         driver.findElement(By.id("username")).sendKeys("Java");
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Selenium");
+        driver.findElement(By.id("password")).sendKeys("Selenium");
         driver.findElement(By.xpath("//span[@class='id-checkmark']")).click();
     }
 }

@@ -19,6 +19,6 @@ public class MethodClass02 {
 
     @Test
     static void directMethod02(){
-        MethodClass01.indirectMethod();
+        indirectMethod();
     }
 }

@@ -1,14 +1,14 @@
 package TestNG_Examples;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class LowerUpperCaseUsingActions {
+
     @Test
     public void lowerUpper(){
         WebDriver driver = new ChromeDriver();
@@ -19,6 +19,8 @@ public class LowerUpperCaseUsingActions {
         inputText.sendKeys("upper case");
         action.keyUp(Keys.SHIFT).perform();
         inputText.sendKeys("  lower case");
+        TakesScreenshot ts= (TakesScreenshot)driver;
+        File src = ts.getScreenshotAs(OutputType.FILE);
         driver.quit();
     }
 }
